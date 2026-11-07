@@ -4,40 +4,46 @@
 # edit the tap's copy by hand: the next release replaces it. The desktop app is
 # the cask, ordewell-desktop.rb.tmpl.
 #
+# There is no `version` line: Homebrew scans the version from the archive URLs
+# (ordewell-<x.y.z>-<os>-<arch>.tar.gz), and brew audit flags an explicit one as
+# redundant. For the same reason the URLs spell the version out instead of
+# interpolating `version`, which a formula without that line does not have yet
+# while its class body is read. `livecheck` comes before the platform blocks,
+# which is the order brew audit asks for.
+#
 # Each platform downloads the release's versioned archive, which holds one
 # executable, `ordewell`: the same file the one-line installer and the
 # Release's fixed-name copy carry.
 class Ordewell < Formula
   desc "Turn one goal into an ordered plan of coding-agent tasks"
   homepage "https://ordewell.ai/"
-  version "0.13.0"
   license "Apache-2.0"
+
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
   on_macos do
     on_arm do
-      url "https://github.com/ordewell/ordewell/releases/download/v#{version}/ordewell-#{version}-darwin-arm64.tar.gz"
-      sha256 "9760f139ee42ba23074f7e765dfa032fe180ef0e0590ad63bc94cc6ad2fadd37"
+      url "https://github.com/ordewell/ordewell/releases/download/v0.13.1/ordewell-0.13.1-darwin-arm64.tar.gz"
+      sha256 "57e2c3418cbbb407b2a87473841547fae11cf49ee4bcaa24edabb025ba415aea"
     end
     on_intel do
-      url "https://github.com/ordewell/ordewell/releases/download/v#{version}/ordewell-#{version}-darwin-x64.tar.gz"
-      sha256 "cff2f583697e9836409d155400911e40e8b02f4e2f25dccb377f96911ca7815b"
+      url "https://github.com/ordewell/ordewell/releases/download/v0.13.1/ordewell-0.13.1-darwin-x64.tar.gz"
+      sha256 "c900db8b89f3506be284ac547f2abeda1effc65b7810f3907e094f70aefe6604"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ordewell/ordewell/releases/download/v#{version}/ordewell-#{version}-linux-arm64.tar.gz"
-      sha256 "c422e8d8674aa853e1b78834d7dbcb85c98961e8926efdb14cb98d133f752dd5"
+      url "https://github.com/ordewell/ordewell/releases/download/v0.13.1/ordewell-0.13.1-linux-arm64.tar.gz"
+      sha256 "de78821d7f788f0a74e6aa4307896f72e8900e2bb9a7d775bd6b43db36c6326f"
     end
     on_intel do
-      url "https://github.com/ordewell/ordewell/releases/download/v#{version}/ordewell-#{version}-linux-x64.tar.gz"
-      sha256 "75e0023a290545d2e93f55a87428a6ffa663fbc668d6126da1186e36a772da3a"
+      url "https://github.com/ordewell/ordewell/releases/download/v0.13.1/ordewell-0.13.1-linux-x64.tar.gz"
+      sha256 "1965c22e09e8c30c8ef4294bab8a6fe79d24b2abc3d136db636699cc4765fd88"
     end
-  end
-
-  livecheck do
-    url :stable
-    strategy :github_latest
   end
 
   def install
