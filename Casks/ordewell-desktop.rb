@@ -14,8 +14,7 @@ cask "ordewell-desktop" do
   sha256 arm:   "542b23c9050c2ac8b4d695a78c9d491b9e15bf7c5c3f4444d6fe377166d3ffd8",
          intel: "8775154a6361bb4905f77a287d9d580cf97054f5ac4ca01ec51e9dc49ec23cf6"
 
-  url "https://github.com/ordewell/ordewell/releases/download/v#{version}/Ordewell-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/ordewell/ordewell/"
+  url "https://github.com/ordewell/ordewell/releases/download/v#{version}/Ordewell-#{version}-mac-#{arch}.dmg"
   name "Ordewell"
   desc "Turn one goal into an ordered plan of coding-agent tasks"
   homepage "https://ordewell.ai/"
