@@ -26,23 +26,23 @@ class Ordewell < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/ordewell/ordewell/releases/download/v0.14.8/ordewell-0.14.8-darwin-arm64.tar.gz"
-      sha256 "c8a7d0f951f31f660ee27a222dd0c349bc0030111d1d09e1141daf1c48cc694b"
+      url "https://github.com/ordewell/ordewell/releases/download/v0.14.9/ordewell-0.14.9-darwin-arm64.tar.gz"
+      sha256 "ca3aa5369541ac4b97ef4bad175005c140258f8545cf9f197c7f0f103f215350"
     end
     on_intel do
-      url "https://github.com/ordewell/ordewell/releases/download/v0.14.8/ordewell-0.14.8-darwin-x64.tar.gz"
-      sha256 "f57f35030ddcaf208176d41e4742a940d37e393986465b1430a1f078e0875435"
+      url "https://github.com/ordewell/ordewell/releases/download/v0.14.9/ordewell-0.14.9-darwin-x64.tar.gz"
+      sha256 "eddedbff08d50b3b05617ccab2393c7f8bd51d00968195b2c4bcd15572af389f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ordewell/ordewell/releases/download/v0.14.8/ordewell-0.14.8-linux-arm64.tar.gz"
-      sha256 "9da951836098def48ce2004f499b90cad055332e1acd8c8c1064a3e74f7db574"
+      url "https://github.com/ordewell/ordewell/releases/download/v0.14.9/ordewell-0.14.9-linux-arm64.tar.gz"
+      sha256 "5901c225e39d246840516b31427ea01a9d144aa2b4b3d857b260c892342d79ed"
     end
     on_intel do
-      url "https://github.com/ordewell/ordewell/releases/download/v0.14.8/ordewell-0.14.8-linux-x64.tar.gz"
-      sha256 "fb3146cb64eb2abda0251f6a9e0a32fb611a564bc2cd56be2cd223f920c497ac"
+      url "https://github.com/ordewell/ordewell/releases/download/v0.14.9/ordewell-0.14.9-linux-x64.tar.gz"
+      sha256 "4ca8b2331c9fb389575e9024d67f416cc3422614418a2eaf09c5b3231b023632"
     end
   end
 
