@@ -10,9 +10,9 @@
 cask "ordewell-desktop" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.14.15"
-  sha256 arm:   "4b0aa6bc3e3e9e547043c8da72bf948f1bf666355302daffffba3a991eccf491",
-         intel: "df62fdca4ed1d7d6ecec9ee1d79d9929043eabd39772d0ee2fafdfeeeeed4473"
+  version "0.14.16"
+  sha256 arm:   "ac5f9fe4e0605c12ef5c652d0020570e1957be28c2e205c40e3fff2240de8fd3",
+         intel: "0a0cc21ed9551939786a089aeb556d34adef82a7745839535bd9d6383044fc2f"
 
   url "https://github.com/ordewell/ordewell/releases/download/v#{version}/Ordewell-#{version}-mac-#{arch}.dmg"
   name "Ordewell"
